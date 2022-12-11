@@ -5,6 +5,11 @@ import java.io.InputStreamReader;
 
 public class TxtReader {
     /**
+     * 65535, means the end of the txt
+     */
+    public static char EOF=(char) -1;
+
+    /**
      * 存储接下来要处理的字符。
      * 生成时自动读取到第一个字符。
      * 应当在处理完当前字符后进行一次读取以给下一次使用。
@@ -34,12 +39,7 @@ public class TxtReader {
             col++;
         }
         //转化为char
-        if(in==-1){
-            currChar='#';//终结符即为'#'
-        }else {
-            currChar = Character.toUpperCase((char) in);
-        }
-
+        currChar = Character.toUpperCase((char) in);
     }
 
 

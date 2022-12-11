@@ -17,8 +17,8 @@ public class Lexer {
      */
     public Token fetchToken() throws IOException {
         //结束符立即返回
-        if(txtReader.currChar=='#'){
-            return TokenTypeEnum.stringTransToken("#");
+        if(txtReader.currChar==TxtReader.EOF){
+            return TokenTypeEnum.stringTransToken(""+TxtReader.EOF);
         }
         //跳过空白
         while(isSpace(txtReader.currChar)){
@@ -80,13 +80,13 @@ public class Lexer {
                 token=TokenTypeEnum.stringTransToken(txtReader.currChar+""+txtReader.currChar);
                 StringBuilder s= new StringBuilder();
                 s.append(txtReader.currChar);
-                //读到行末
-                while(txtReader.currChar!='\n' && txtReader.currChar!='\r'){
+                //读到行末或结束（不检测结束的话会导致进入死循环，一直读取EOF但不停止）
+                while(txtReader.currChar!='\n' && txtReader.currChar!='\r' && txtReader.currChar!=TxtReader.EOF){
                     s.append(txtReader.currChar);
                     txtReader.readChar();
                 }
                 token.lexeme= String.valueOf(s);
-//                return fetchToken();//跳过，再找一个Token（如果语法分析不嫌弃COMMENT可以不需要这句）
+                return fetchToken();//找下一个Token来返回（如果语法分析不嫌弃COMMENT可以不需要这句）
             }
             return token;
         }

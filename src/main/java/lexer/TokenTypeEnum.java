@@ -58,7 +58,7 @@ public enum TokenTypeEnum {
         stringTransTokenMap.put("//",new Token(COMMENT,"//",0));//
         stringTransTokenMap.put("--",new Token(COMMENT,"--",0));//
         //结束
-        stringTransTokenMap.put("#",new Token(NONTOKEN,"#",0));
+        stringTransTokenMap.put(""+TxtReader.EOF,new Token(NONTOKEN,"EOF(#)",0));
     }
 
     /**
