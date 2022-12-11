@@ -39,21 +39,21 @@ public enum TokenTypeEnum {
         //运算符
         stringTransTokenMap.put("+",new Token(PLUS,"+",0));
         stringTransTokenMap.put("-",new Token(MINUS,"-",0));
-        stringTransTokenMap.put("*",new Token(MUL,"*",0));
+        stringTransTokenMap.put("*",new Token(MUL,"*",0));//"**"前缀
         stringTransTokenMap.put("/",new Token(DIV,"/",0));
-        stringTransTokenMap.put("**",new Token(POWER,"**",0));
+        stringTransTokenMap.put("**",new Token(POWER,"**",0));//
         //函数名
         stringTransTokenMap.put("SIN",new Token(FUNC,"SIN",0));
         stringTransTokenMap.put("COS",new Token(FUNC,"COS",0));
-        stringTransTokenMap.put("TAN",new Token(FUNC,"TAN",0));
+        stringTransTokenMap.put("TAN",new Token(FUNC,"TAN",0));//
         stringTransTokenMap.put("LN",new Token(FUNC,"LN",0));
-        stringTransTokenMap.put("EXP",new Token(FUNC,"EXP",0));
+        stringTransTokenMap.put("EXP",new Token(FUNC,"EXP",0));//
         stringTransTokenMap.put("SQRT",new Token(FUNC,"SQRT",0));
         //参数
-        stringTransTokenMap.put("T",new Token(T,"T",0));
+        stringTransTokenMap.put("T",new Token(T,"T",0));//"TAN"前缀
         //常数
         stringTransTokenMap.put("PI",new Token(CONST_ID,"PI",3.1415926));
-        stringTransTokenMap.put("E",new Token(CONST_ID,"E",2.71828));
+        stringTransTokenMap.put("E",new Token(CONST_ID,"E",2.71828));//"EXP"前缀
         //结束
         stringTransTokenMap.put("#",new Token(NONTOKEN,"#",0));
     }
@@ -66,11 +66,6 @@ public enum TokenTypeEnum {
     public static Token stringTransToken(String s){
         Token ans= stringTransTokenMap.get(s);
         if(ans==null){
-            //判断数字
-            try {
-                double d = Double.parseDouble(s);
-                return new Token(CONST_ID,s,d);
-            }catch (NumberFormatException ignore){}
             return new Token(ERRTOKEN,s,0);
         }
         return ans;
