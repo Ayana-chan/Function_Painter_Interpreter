@@ -19,7 +19,12 @@ public class TxtReader {
     }
 
     public void readChar() throws IOException {
-        currChar = Character.toUpperCase((char) inputStreamReader.read());
+        int in=inputStreamReader.read();
+        if(in==-1){
+            currChar='#';//终结符即为'#'
+        }else {
+            currChar = Character.toUpperCase((char) in);
+        }
     }
 
 

@@ -6,4 +6,12 @@ public class Lexer {
     public Lexer(TxtReader txtReader){
         this.txtReader=txtReader;
     }
+
+
+    //get
+
+    //for test
+    public TxtReader getTxtReader() {
+        return txtReader;
+    }
 }

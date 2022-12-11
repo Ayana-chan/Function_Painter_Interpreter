@@ -16,7 +16,11 @@ public class Main {
         }
         if(lexer==null){
             System.out.println("ERROR: Lexer Production Error.");
+            return;
         }
+
+
+
     }
 
     public static void main(String[] args) {
