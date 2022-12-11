@@ -11,20 +11,35 @@ public class TxtReader {
      */
     public char currChar;
 
+    //记录当前字符所在行列
+    private int line;
+    private int col;
+
     private InputStreamReader inputStreamReader;
 
     public TxtReader(InputStreamReader inputStreamReader) throws IOException {
         this.inputStreamReader=inputStreamReader;
+        line=1;
+        col=0;
         readChar();//生成对象时就读取第一个字符
     }
 
     public void readChar() throws IOException {
         int in=inputStreamReader.read();
+        //行列变化
+        if(currChar=='\n'){
+            line++;
+            col=1;
+        }else{
+            col++;
+        }
+        //转化为char
         if(in==-1){
             currChar='#';//终结符即为'#'
         }else {
             currChar = Character.toUpperCase((char) in);
         }
+
     }
 
 
@@ -32,5 +47,13 @@ public class TxtReader {
 
     public char getCurrChar() {
         return currChar;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public int getCol() {
+        return col;
     }
 }

@@ -9,6 +9,12 @@ public class Lexer {
         this.txtReader=txtReader;
     }
 
+    /**
+     * 需要紧急切断分析的只有两种：结束符和注释符。
+     * 由于它们既不是数字也不是字母，所以不会在前两种情况内被误吃。
+     * @return
+     * @throws IOException
+     */
     public Token fetchToken() throws IOException {
         //结束符立即返回
         if(txtReader.currChar=='#'){
@@ -64,9 +70,23 @@ public class Lexer {
         else{
             Token token=TokenTypeEnum.stringTransToken(""+txtReader.currChar);
             txtReader.readChar();
+            //指数
             if(token.type==TokenTypeEnum.MUL && txtReader.currChar=='*'){
                 token=TokenTypeEnum.stringTransToken("**");
                 txtReader.readChar();
+            }
+            //注释
+            else if(token.type==TokenTypeEnum.DIV && txtReader.currChar=='/' || token.type==TokenTypeEnum.MINUS && txtReader.currChar=='-'){
+                token=TokenTypeEnum.stringTransToken(txtReader.currChar+""+txtReader.currChar);
+                StringBuilder s= new StringBuilder();
+                s.append(txtReader.currChar);
+                //读到行末
+                while(txtReader.currChar!='\n' && txtReader.currChar!='\r'){
+                    s.append(txtReader.currChar);
+                    txtReader.readChar();
+                }
+                token.lexeme= String.valueOf(s);
+//                return fetchToken();//跳过，再找一个Token（如果语法分析不嫌弃COMMENT可以不需要这句）
             }
             return token;
         }

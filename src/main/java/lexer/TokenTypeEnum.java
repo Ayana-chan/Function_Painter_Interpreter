@@ -38,9 +38,9 @@ public enum TokenTypeEnum {
         stringTransTokenMap.put(",",new Token(COMMA,",",0));
         //运算符
         stringTransTokenMap.put("+",new Token(PLUS,"+",0));
-        stringTransTokenMap.put("-",new Token(MINUS,"-",0));
+        stringTransTokenMap.put("-",new Token(MINUS,"-",0));//"--"前缀
         stringTransTokenMap.put("*",new Token(MUL,"*",0));//"**"前缀
-        stringTransTokenMap.put("/",new Token(DIV,"/",0));
+        stringTransTokenMap.put("/",new Token(DIV,"/",0));//"//"前缀
         stringTransTokenMap.put("**",new Token(POWER,"**",0));//
         //函数名
         stringTransTokenMap.put("SIN",new Token(FUNC,"SIN",0));
@@ -54,6 +54,9 @@ public enum TokenTypeEnum {
         //常数
         stringTransTokenMap.put("PI",new Token(CONST_ID,"PI",3.1415926));
         stringTransTokenMap.put("E",new Token(CONST_ID,"E",2.71828));//"EXP"前缀
+        //注释
+        stringTransTokenMap.put("//",new Token(COMMENT,"//",0));//
+        stringTransTokenMap.put("--",new Token(COMMENT,"--",0));//
         //结束
         stringTransTokenMap.put("#",new Token(NONTOKEN,"#",0));
     }
