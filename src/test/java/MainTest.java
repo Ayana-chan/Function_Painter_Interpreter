@@ -1,5 +1,7 @@
 import lexer.Lexer;
 import lexer.LexerFactory;
+import lexer.Token;
+import lexer.TokenTypeEnum;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
@@ -19,17 +21,14 @@ public class MainTest {
             System.out.println("ERROR: Lexer Production Error.");
             return;
         }
-        for(int i=0;i<20;i++){
+        Token token;
+        do{
             try {
-                char c=lexer.getTxtReader().currChar;
-                if(c=='#'){
-                    return;
-                }
-                System.out.println(c);
-                lexer.getTxtReader().readChar();
+                token=lexer.fetchToken();
+                System.out.println(token.type+" "+token.lexeme+" "+token.value);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }
+        }while (token.type!= TokenTypeEnum.NONTOKEN);
     }
 }
