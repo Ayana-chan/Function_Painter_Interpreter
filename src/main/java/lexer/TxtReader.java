@@ -42,6 +42,16 @@ public class TxtReader {
         currChar = Character.toUpperCase((char) in);
     }
 
+    public void closeReader(){
+        if(inputStreamReader!=null) {
+            try {
+                inputStreamReader.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
 
     //get
 

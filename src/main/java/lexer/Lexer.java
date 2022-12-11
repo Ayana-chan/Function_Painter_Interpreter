@@ -16,8 +16,9 @@ public class Lexer {
      * @throws IOException
      */
     public Token fetchToken() throws IOException {
-        //结束符立即返回
+        //结束符立即关闭流并返回（Lexer至此结束）
         if(txtReader.currChar==TxtReader.EOF){
+            txtReader.closeReader();
             return TokenTypeEnum.stringTransToken(""+TxtReader.EOF);
         }
         //跳过空白

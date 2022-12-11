@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Comment, but '#' would be commented">
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Comment complete(use 65535 to take place '#')">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lexer/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lexer/TokenTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lexer/TokenTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lexer/TxtReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lexer/TxtReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +106,8 @@
       <workItem from="1670685885052" duration="1904000" />
       <workItem from="1670729250789" duration="7045000" />
       <workItem from="1670739692384" duration="12833000" />
-      <workItem from="1670766172644" duration="2252000" />
+      <workItem from="1670766172644" duration="2589000" />
+      <workItem from="1670768790246" duration="242000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -203,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670767929566</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Comment complete(use 65535 to take place '#')">
+      <created>1670768745037</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670768745037</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +237,7 @@
     <MESSAGE value="Better Errors" />
     <MESSAGE value="Parser start" />
     <MESSAGE value="Comment, but '#' would be commented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comment, but '#' would be commented" />
+    <MESSAGE value="Comment complete(use 65535 to take place '#')" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment complete(use 65535 to take place '#')" />
   </component>
 </project>
