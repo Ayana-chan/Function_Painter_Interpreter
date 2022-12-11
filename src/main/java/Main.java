@@ -8,13 +8,7 @@ import java.io.IOException;
 public class Main {
     public void startMainController(String fileName){
         //生成parser
-        try {
-            ParserMain parserMain=new ParserMain(fileName);
-        }catch (FileNotFoundException e){
-            System.out.println("ERROR: File Not Found.");
-            return;
-        }
-
+        ParserMain parserMain=new ParserMain();
 
 
     }

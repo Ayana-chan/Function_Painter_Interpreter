@@ -24,7 +24,7 @@ public class MainTest {
         Token token;
         do{
             try {
-                token=lexer.fetchToken();
+                token=lexer.getToken();
                 System.out.println(token.type+" "+token.lexeme+" "+token.value);
             } catch (IOException e) {
                 throw new RuntimeException(e);

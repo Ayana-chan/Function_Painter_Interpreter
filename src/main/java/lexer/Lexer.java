@@ -15,7 +15,7 @@ public class Lexer {
      * @return
      * @throws IOException
      */
-    public Token fetchToken() throws IOException {
+    public Token getToken() throws IOException {
         //结束符立即关闭流并返回（Lexer至此结束）
         if(txtReader.currChar==TxtReader.EOF){
             txtReader.closeReader();
@@ -87,7 +87,7 @@ public class Lexer {
                     txtReader.readChar();
                 }
                 token.lexeme= String.valueOf(s);
-                return fetchToken();//找下一个Token来返回（如果语法分析不嫌弃COMMENT可以不需要这句）
+                return getToken();//找下一个Token来返回（如果语法分析不嫌弃COMMENT可以不需要这句）
             }
             return token;
         }
@@ -109,7 +109,6 @@ public class Lexer {
 
     //get
 
-    //for test
     public TxtReader getTxtReader() {
         return txtReader;
     }
