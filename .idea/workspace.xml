@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="fetchToken can get token depend on space. Modefying">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="fetchToken done">
       <change beforePath="$PROJECT_DIR$/src/main/java/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lexer/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lexer/TokenTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lexer/TokenTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test1.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,7 @@
       <updated>1670685883735</updated>
       <workItem from="1670685885052" duration="1904000" />
       <workItem from="1670729250789" duration="7045000" />
-      <workItem from="1670739692384" duration="8747000" />
+      <workItem from="1670739692384" duration="9212000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -165,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670745987041</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fetchToken done">
+      <created>1670748503845</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670748503845</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +196,7 @@
     <MESSAGE value="Better LexerFactory" />
     <MESSAGE value="Better LexerFactory(set EOF to '#') and test" />
     <MESSAGE value="fetchToken can get token depend on space. Modefying" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetchToken can get token depend on space. Modefying" />
+    <MESSAGE value="fetchToken done" />
+    <option name="LAST_COMMIT_MESSAGE" value="fetchToken done" />
   </component>
 </project>

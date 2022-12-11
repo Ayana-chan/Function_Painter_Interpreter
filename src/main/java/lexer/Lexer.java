@@ -27,6 +27,11 @@ public class Lexer {
                 if(txtReader.currChar=='.'){
                     //俩小数点，返回错误
                     if(isDotExisted){
+                        //把逻辑上在一起的数字吃掉
+                        while(isDigit(txtReader.currChar) || txtReader.currChar=='.'){
+                            s.append(txtReader.currChar);
+                            txtReader.readChar();
+                        }
                         return new Token(TokenTypeEnum.ERRTOKEN,String.valueOf(s),0);
                     }
                     isDotExisted=true;
