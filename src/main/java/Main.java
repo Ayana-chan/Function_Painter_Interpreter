@@ -1,21 +1,17 @@
 import lexer.Lexer;
 import lexer.LexerFactory;
+import parser.ParserMain;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Main {
     public void startMainController(String fileName){
-        //生成lexer
-        Lexer lexer=null;
+        //生成parser
         try {
-            lexer = LexerFactory.getLexer(fileName);
+            ParserMain parserMain=new ParserMain(fileName);
         }catch (FileNotFoundException e){
             System.out.println("ERROR: File Not Found.");
-            return;
-        }
-        if(lexer==null){
-            System.out.println("ERROR: Lexer Production Error.");
             return;
         }
 

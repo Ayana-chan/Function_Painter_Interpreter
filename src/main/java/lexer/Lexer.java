@@ -19,7 +19,7 @@ public class Lexer {
             txtReader.readChar();
         }
         //根据开头字符，分为三种情况进行拼接
-        //数字
+        //1.数字
         if(isDigit(txtReader.currChar)){
             StringBuilder s= new StringBuilder();
             boolean isDotExisted=false;//是否读出小数点
@@ -51,7 +51,7 @@ public class Lexer {
             //建立Token时要计算其数值
             return new Token(TokenTypeEnum.CONST_ID,String.valueOf(s),Double.parseDouble(String.valueOf(s)));
         }
-        //字母开头，目前只有纯字母才符合（保留字、函数名、参数、常数），但把数字也吃了可以方便报错
+        //2.字母开头。目前只有纯字母才符合（保留字、函数名、参数、常数），但把数字也吃了可以方便报错
         else if(isAlpha(txtReader.currChar)){
             StringBuilder s= new StringBuilder();
             while(isAlpha(txtReader.currChar) || isDigit(txtReader.currChar)){
@@ -60,7 +60,7 @@ public class Lexer {
             }
             return TokenTypeEnum.stringTransToken(String.valueOf(s));
         }
-        //运算符、分隔符。除乘法以外都是单字符成Token
+        //3.运算符、分隔符。除乘法以外都是单字符成Token
         else{
             Token token=TokenTypeEnum.stringTransToken(""+txtReader.currChar);
             txtReader.readChar();
