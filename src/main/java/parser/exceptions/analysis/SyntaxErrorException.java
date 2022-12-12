@@ -3,7 +3,7 @@ package parser.exceptions.analysis;
 import lexer.Token;
 import lexer.TokenTypeEnum;
 
-public class SyntaxErrorException extends RuntimeException{
+public class SyntaxErrorException extends MyAnalysisException{
     public SyntaxErrorException(Token token, TokenTypeEnum aimTokenType){
         super("ERROR: Parse Failed.\n" +
                 "Error String: "+token.lexeme+"\n" +

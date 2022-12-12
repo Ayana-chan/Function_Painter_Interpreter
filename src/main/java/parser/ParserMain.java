@@ -6,7 +6,9 @@ import lexer.LexerFactory;
 import lexer.Token;
 import lexer.TokenTypeEnum;
 import parser.exceptions.analysis.LexicalErrorException;
+import parser.exceptions.analysis.MyAnalysisException;
 import parser.exceptions.analysis.SyntaxErrorException;
+import parser.exceptions.runtime.MyRuntimeException;
 import parser.treenodes.*;
 
 import java.io.FileNotFoundException;
@@ -28,9 +30,14 @@ public class ParserMain {
         if(lexer==null){
             throw new RuntimeException("ERROR: Lexer Production Error.");
         }
-        fetchToken();//读入第一个token
-        //以Program为入口开始语法分析
-        parseProgram();
+        try {
+            fetchToken();//读入第一个token
+            //以Program为入口开始语法分析
+            parseProgram();
+        }catch (MyAnalysisException | MyRuntimeException e){
+            System.err.println(e.getMessage());
+            System.err.println("Error Position: line:"+lexer.getTxtReader().getLine()+" ,col:"+lexer.getTxtReader().getCol());
+        }
     }
 
     /**
