@@ -11,14 +11,16 @@ public class MapGUI {
 
     private void init() {
         JFrame window = new JFrame("函数图");
-        window.setSize(1000, 500);
+        window.setSize(1000, 1000);
         window.setDefaultCloseOperation(window.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.setVisible(true);
         Toolkit kit = Toolkit.getDefaultToolkit();
         Dimension s = kit.getScreenSize();
+
         int screenWidth = s.width;
         int screenHeight = s.height;
+
         window.setLocation(screenWidth / 4, screenHeight / 4);
 
         Draw draw = new Draw();
