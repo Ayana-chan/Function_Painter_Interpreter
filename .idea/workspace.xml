@@ -74,7 +74,18 @@
       <recent name="junit.framework.TestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParseTest.testParse">
+  <component name="RunManager" selected="Application.inter">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Lexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lexer.Lexer" />
       <module name="Function_Painter_Interpreter" />
@@ -96,13 +107,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="inter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="drawer.inter" />
+      <module name="Function_Painter_Interpreter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="drawer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,13 +141,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Lexer" />
+      <item itemvalue="Application.inter" />
       <item itemvalue="JUnit.LexTest.testLexerReading" />
       <item itemvalue="JUnit.ParseTest.testParse" />
-      <item itemvalue="应用程序.Unnamed" />
-      <item itemvalue="应用程序.Lexer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.inter" />
         <item itemvalue="JUnit.ParseTest.testParse" />
         <item itemvalue="JUnit.LexTest.testLexerReading" />
       </list>
