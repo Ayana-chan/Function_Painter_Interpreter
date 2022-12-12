@@ -1,0 +1,6 @@
+for t from sin(30) to 999 step 9999 draw(0,t);
+for t from cos(60) to 999 step 9999 draw(t,t);
+for t from tan(60) to 999 step 9999 draw(t,t);
+for t from ln(8) to 999 step 9999 draw(t,t);
+for t from exp(2) to 999 step 9999 draw(t,t);
+for t from sqrt(2) to 999 step 9999 draw(t,t);

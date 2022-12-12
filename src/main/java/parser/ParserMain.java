@@ -13,30 +13,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ParserMain {
-    public PointProducer pointProducer=new PointProducer();
-    public PointManager pointManager=new PointManager();
+    public PointProducer pointProducer=new PointProducer();//点生产者，存储了各个参数值
+    public PointManager pointManager=new PointManager();//点管理库，用于前端显示
+
+    public boolean isTreePrinterOn=true;//控制parser是否打印语法树
 
     private Token currToken;
 
     private Lexer lexer;
-
-    public ParserMain(){}//let lexer assigned in function 'parse'
-//    public ParserMain(String fileName) throws FileNotFoundException {
-//        lexer = LexerFactory.getLexer(fileName);
-//        if(lexer==null){
-//            throw new RuntimeException("ERROR: Lexer Production Error.");
-//        }
-//
-//    }
-//    public ParserMain(FileInputStream fileInputStream){
-//        lexer = LexerFactory.getLexer(fileInputStream);
-//        if(lexer==null){
-//            throw new RuntimeException("ERROR: Lexer Production Error.");
-//        }
-//    }
-//    public ParserMain(Lexer lexer){
-//        this.lexer=lexer;
-//    }
 
     public void parse(String fileName) throws FileNotFoundException, LexicalErrorException, SyntaxErrorException {
         //获取lexer
@@ -78,6 +62,9 @@ public class ParserMain {
     //----------------------------------------------------
     //parse functions
 
+    /**
+     * 分析程序的入口。分析过程中自动执行，将结果点添加到pointManager
+     */
     private void parseProgram(){
         while(currToken.type!=TokenTypeEnum.NONTOKEN){
             //匹配一句
@@ -156,7 +143,12 @@ public class ParserMain {
         pointProducer.createPoint(pointManager,from,to,step,x,y);
     }
 
-    //分析数学表达式
+    //分析数学表达式----------------------------------------
+
+    /**
+     * 分析数学表达式的入口，构建语法树
+     * @return
+     */
     //加减
     private ASTNode parseExpression(){
         ASTNode ans= parseExpressionWithoutPrint();
@@ -256,10 +248,16 @@ public class ParserMain {
 
     //--------------------------------------------------------
     //辅助程序
-    //打印语法树
+    /**
+     * 打印语法树
+     */
     private void printTree(ASTNode root){
-        System.out.println("Expression Tree:");
+        if(!isTreePrinterOn){
+            return;
+        }
+        System.out.println("\nExpression Tree:");
         printTree(root,1);
+        System.out.println();
     }
 
     private void printTree(ASTNode root,int depth){

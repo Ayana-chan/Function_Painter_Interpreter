@@ -9,7 +9,7 @@ public class ParseTest {
     public void testParse(){
         ParserMain parserMain=new ParserMain();
         try {
-            parserMain.parse("test2.txt");
+            parserMain.parse("funTest.txt");
             for(Pair<Double,Double> p:parserMain.pointManager.getPoints()){
                 System.out.println("("+p.getKey()+","+p.getValue()+")");
             }

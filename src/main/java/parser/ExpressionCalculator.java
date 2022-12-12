@@ -12,6 +12,7 @@ import parser.treenodes.FunNode;
  * 计算表达式（代入语法树）
  */
 public class ExpressionCalculator {
+    public static double tooBigBound=Math.pow(10,6);//number out of tooBigBound is considered as an infinity
     public static double calExpression(ASTNode root) throws MyRuntimeException{
         return calExpression(root,0);
     }
@@ -33,6 +34,11 @@ public class ExpressionCalculator {
                         throw new DivZeroException();
                     }
                     return l/r;
+                case POWER:
+                    if(l==0 && r==0){
+                        return 1;
+                    }
+                    return Math.pow(l,r);
             }
         }else if(root instanceof FunNode){
             double c=calExpression(((FunNode) root).child,T);
@@ -49,18 +55,18 @@ public class ExpressionCalculator {
         double ans;
         switch (funName){
             case "SIN":
-                return Math.sin(argument);
+                return Math.sin(argument*Math.PI/180);
             case "COS":
-                return Math.cos(argument);
+                return Math.cos(argument*Math.PI/180);
             case "TAN":
-                ans=Math.tan(argument);
-                if(Double.isNaN(ans)){
+                ans=Math.tan(argument*Math.PI/180);
+                if(Double.isNaN(ans) || ans>tooBigBound){
                     throw new FunctionArgumentOutOfBoundException(funName,argument);
                 }
                 return ans;
             case "LN":
                 ans=Math.log(argument);
-                if(Double.isNaN(ans) || argument==0){
+                if(Double.isNaN(ans) || argument==0 || ans<-tooBigBound){
                     throw new FunctionArgumentOutOfBoundException(funName, argument);
                 }
                 return ans;
