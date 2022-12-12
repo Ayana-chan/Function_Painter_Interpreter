@@ -7,12 +7,12 @@ import org.junit.Test;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class MainTest {
+public class LexTest {
     @Test
     public void testLexerReading(){
         Lexer lexer=null;
         try {
-            lexer = LexerFactory.getLexer("test1.txt");
+            lexer = LexerFactory.getLexer("test2.txt");
         }catch (FileNotFoundException e){
             System.out.println("ERROR: File Not Found.");
             return;

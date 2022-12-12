@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Coding Parser">
-      <change afterPath="$PROJECT_DIR$/src/main/java/parser/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parser/treenodes/ASTNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parser/treenodes/BinaryNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parser/treenodes/ConstNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parser/treenodes/FunNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parser/treenodes/TNode.java" afterDir="false" />
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Parse 1.0">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ParseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parser/ParserMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ParserMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parser/SyntaxErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/SyntaxErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/treenodes/ConstNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/treenodes/ConstNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LexTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +55,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.MainTest.testLexerReading">
+  <component name="RunManager" selected="JUnit.ParseTest.testParse">
     <configuration name="Lexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lexer.Lexer" />
       <module name="Function_Painter_Interpreter" />
@@ -81,11 +77,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testLexerReading" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LexTest.testLexerReading" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Function_Painter_Interpreter" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="MAIN_CLASS_NAME" value="LexTest" />
       <option name="METHOD_NAME" value="testLexerReading" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParseTest.testParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Function_Painter_Interpreter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParseTest" />
+      <option name="METHOD_NAME" value="testParse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,11 +100,13 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Application.Lexer" />
-      <item itemvalue="JUnit.MainTest.testLexerReading" />
+      <item itemvalue="JUnit.LexTest.testLexerReading" />
+      <item itemvalue="JUnit.ParseTest.testParse" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTest.testLexerReading" />
+        <item itemvalue="JUnit.ParseTest.testParse" />
+        <item itemvalue="JUnit.LexTest.testLexerReading" />
         <item itemvalue="Application.Lexer" />
       </list>
     </recent_temporary>
@@ -118,7 +126,7 @@
       <workItem from="1670768790246" duration="242000" />
       <workItem from="1670769814755" duration="238000" />
       <workItem from="1670770426738" duration="2005000" />
-      <workItem from="1670809873133" duration="7727000" />
+      <workItem from="1670809873133" duration="8924000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -232,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670772390781</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Parse 1.0">
+      <created>1670818481022</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670818481022</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +280,7 @@
     <MESSAGE value="Comment complete(use 65535 to take place '#')" />
     <MESSAGE value="Close Lexer when EOF" />
     <MESSAGE value="Coding Parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coding Parser" />
+    <MESSAGE value="Parse 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parse 1.0" />
   </component>
 </project>

@@ -40,6 +40,7 @@ public class ParserMain {
             throw new RuntimeException("ERROR: Lexer Production Error.");
         }
 
+        fetchToken();
         parseProgram();
 
 
@@ -81,15 +82,20 @@ public class ParserMain {
     }
 
     private void parseStatement(){
+        System.out.println(currToken.type);
         switch (currToken.type){
             case ORIGIN:
                 parseOriginStatement();
+                break;
             case SCALE:
                 parseScaleStatement();
+                break;
             case ROT:
                 parseRotStatement();
+                break;
             case FOR:
                 parseForStatement();
+                break;
             default:
                 throw new SyntaxErrorException(currToken);
         }
@@ -146,6 +152,7 @@ public class ParserMain {
 
     }
 
+    //分析数学表达式
     //加减
     private ASTNode parseExpression(){
         ASTNode left,right;
@@ -158,6 +165,7 @@ public class ParserMain {
             right = parseTerm();
             left=new BinaryNode(localType,left,right);
         }
+        printTree(left);//打印
         return left;
     }
 
@@ -231,6 +239,31 @@ public class ParserMain {
                 return new FunNode(TokenTypeEnum.FUNC,child,funName);
             default:
                 throw new SyntaxErrorException(currToken);
+        }
+    }
+
+    //辅助程序
+    //打印语法树
+    private void printTree(ASTNode root){
+        System.out.println("Expression Tree:");
+        printTree(root,1);
+    }
+
+    private void printTree(ASTNode root,int depth){
+        for(int i=0;i<depth;i++){
+            System.out.print("\t");
+        }
+        if(root instanceof BinaryNode){
+            System.out.println(root.tokenType);
+            printTree(((BinaryNode) root).left,depth+1);
+            printTree(((BinaryNode) root).right,depth+1);
+        }else if(root instanceof FunNode){
+            System.out.println(root.tokenType);
+            printTree(((FunNode) root).child,depth +1);
+        } else if (root instanceof ConstNode) {
+            System.out.println(((ConstNode) root).value);
+        }else{
+            System.out.println("T");
         }
     }
 }
