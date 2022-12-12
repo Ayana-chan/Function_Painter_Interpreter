@@ -82,7 +82,6 @@ public class ParserMain {
     }
 
     private void parseStatement(){
-        System.out.println(currToken.type);
         switch (currToken.type){
             case ORIGIN:
                 parseOriginStatement();
@@ -155,6 +154,12 @@ public class ParserMain {
     //分析数学表达式
     //加减
     private ASTNode parseExpression(){
+        ASTNode ans= parseExpressionWithoutPrint();
+        printTree(ans);//打印
+        return ans;
+    }
+    //比parseExpression少了Print功能，防止Atom回到Expression的时候打印树出现意外现象
+    private ASTNode parseExpressionWithoutPrint(){
         ASTNode left,right;
         TokenTypeEnum localType;
         //左结合然后变成左子树
@@ -165,7 +170,6 @@ public class ParserMain {
             right = parseTerm();
             left=new BinaryNode(localType,left,right);
         }
-        printTree(left);//打印
         return left;
     }
 
@@ -218,23 +222,25 @@ public class ParserMain {
 
     //常量、参数、括号、函数
     private ASTNode parseAtom(){
+        ASTNode ans;
         switch (currToken.type){
             case CONST_ID:
+                ans=new ConstNode(TokenTypeEnum.CONST_ID, currToken.value);
                 matchToken(currToken.type);
-                return new ConstNode(TokenTypeEnum.CONST_ID, currToken.value);
+                return ans;
             case T:
                 matchToken(currToken.type);
                 return new TNode(TokenTypeEnum.T);
             case L_BRACKET:
                 matchToken(currToken.type);
-                ASTNode ans = parseExpression();
+                ans = parseExpressionWithoutPrint();
                 matchToken(TokenTypeEnum.R_BRACKET);
                 return ans;
             case FUNC:
                 String funName=currToken.lexeme;
                 matchToken(currToken.type);
                 matchToken(TokenTypeEnum.L_BRACKET);
-                ASTNode child=parseExpression();
+                ASTNode child=parseExpressionWithoutPrint();
                 matchToken(TokenTypeEnum.R_BRACKET);
                 return new FunNode(TokenTypeEnum.FUNC,child,funName);
             default:
@@ -251,14 +257,14 @@ public class ParserMain {
 
     private void printTree(ASTNode root,int depth){
         for(int i=0;i<depth;i++){
-            System.out.print("\t");
+            System.out.print("\t|");
         }
         if(root instanceof BinaryNode){
             System.out.println(root.tokenType);
             printTree(((BinaryNode) root).left,depth+1);
             printTree(((BinaryNode) root).right,depth+1);
         }else if(root instanceof FunNode){
-            System.out.println(root.tokenType);
+            System.out.println(((FunNode) root).funName);
             printTree(((FunNode) root).child,depth +1);
         } else if (root instanceof ConstNode) {
             System.out.println(((ConstNode) root).value);
