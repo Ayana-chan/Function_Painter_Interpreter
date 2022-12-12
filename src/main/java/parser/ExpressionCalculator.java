@@ -2,6 +2,7 @@ package parser;
 
 import parser.exceptions.runtime.DivZeroException;
 import parser.exceptions.runtime.FunctionArgumentOutOfBoundException;
+import parser.exceptions.runtime.MyRuntimeException;
 import parser.treenodes.ASTNode;
 import parser.treenodes.BinaryNode;
 import parser.treenodes.ConstNode;
@@ -11,11 +12,11 @@ import parser.treenodes.FunNode;
  * 计算表达式（代入语法树）
  */
 public class ExpressionCalculator {
-    public static double calExpression(ASTNode root){
+    public static double calExpression(ASTNode root) throws MyRuntimeException{
         return calExpression(root,0);
     }
     //如果在for语句的最后之外的地方使用了T的话，T=0
-    public static double calExpression(ASTNode root,double T){
+    public static double calExpression(ASTNode root,double T) throws MyRuntimeException {
         //后序遍历
         if(root instanceof BinaryNode){
             double l=calExpression(((BinaryNode) root).left,T);

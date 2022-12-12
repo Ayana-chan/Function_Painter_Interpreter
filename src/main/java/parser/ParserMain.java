@@ -1,5 +1,6 @@
 package parser;
 
+import drawer.PointManager;
 import lexer.Lexer;
 import lexer.LexerFactory;
 import lexer.Token;
@@ -12,6 +13,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ParserMain {
+    public PointProducer pointProducer=new PointProducer();
+    public PointManager pointManager=new PointManager();
+
     private Token currToken;
 
     private Lexer lexer;
@@ -40,13 +44,9 @@ public class ParserMain {
         if(lexer==null){
             throw new RuntimeException("ERROR: Lexer Production Error.");
         }
-
-        fetchToken();
+        fetchToken();//读入第一个token
+        //以Program为入口开始语法分析
         parseProgram();
-
-
-
-
     }
 
     /**
@@ -109,32 +109,32 @@ public class ParserMain {
         matchToken(TokenTypeEnum.ORIGIN);
         matchToken(TokenTypeEnum.IS);
         matchToken(TokenTypeEnum.L_BRACKET);
-        ASTNode e1= parseExpression();
+        ASTNode x= parseExpression();
         matchToken(TokenTypeEnum.COMMA);
-        ASTNode e2= parseExpression();
+        ASTNode y= parseExpression();
         matchToken(TokenTypeEnum.R_BRACKET);
 
-
+        pointProducer.setOrigin(x,y);
     }
 
     private void parseScaleStatement(){
         matchToken(TokenTypeEnum.SCALE);
         matchToken(TokenTypeEnum.IS);
         matchToken(TokenTypeEnum.L_BRACKET);
-        ASTNode e1= parseExpression();
+        ASTNode x= parseExpression();
         matchToken(TokenTypeEnum.COMMA);
-        ASTNode e2= parseExpression();
+        ASTNode y= parseExpression();
         matchToken(TokenTypeEnum.R_BRACKET);
 
-
+        pointProducer.setScale(x,y);
     }
 
     private void parseRotStatement(){
         matchToken(TokenTypeEnum.ROT);
         matchToken(TokenTypeEnum.IS);
-        ASTNode e=parseExpression();
+        ASTNode r=parseExpression();
 
-
+        pointProducer.setRot(r);
     }
 
     private void parseForStatement(){
@@ -153,7 +153,7 @@ public class ParserMain {
         ASTNode y=parseExpression();
         matchToken(TokenTypeEnum.R_BRACKET);
 
-
+        pointProducer.createPoint(pointManager,from,to,step,x,y);
     }
 
     //分析数学表达式

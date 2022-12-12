@@ -1,3 +1,4 @@
+import javafx.util.Pair;
 import org.junit.Test;
 import parser.ParserMain;
 
@@ -9,6 +10,9 @@ public class ParseTest {
         ParserMain parserMain=new ParserMain();
         try {
             parserMain.parse("test2.txt");
+            for(Pair<Double,Double> p:parserMain.pointManager.getPoints()){
+                System.out.println("("+p.getKey()+","+p.getValue()+")");
+            }
         }catch (FileNotFoundException e){
             System.out.println(e.getMessage());
         }

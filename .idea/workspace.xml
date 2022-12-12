@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="create ExpressionCalculator">
-      <change afterPath="$PROJECT_DIR$/src/main/java/parser/exceptions/runtime/DivZeroException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/parser/exceptions/runtime/FunctionArgumentOutOfBoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/parser/ExpressionCalculatorTest.java" afterDir="false" />
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="calculator">
+      <change afterPath="$PROJECT_DIR$/src/main/java/parser/exceptions/runtime/ToLessThanFromException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parser/ExpressionCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ExpressionCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/ParserMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ParserMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parser/PointProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/PointProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test2.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit3 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,6 +60,14 @@
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="parser" />
+    </key>
+  </component>
   <component name="RunManager" selected="JUnit.ParseTest.testParse">
     <configuration name="Lexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lexer.Lexer" />
@@ -130,7 +139,7 @@
       <workItem from="1670768790246" duration="242000" />
       <workItem from="1670769814755" duration="238000" />
       <workItem from="1670770426738" duration="2005000" />
-      <workItem from="1670809873133" duration="16083000" />
+      <workItem from="1670809873133" duration="18040000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -286,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670824708192</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="calculator">
+      <created>1670826826001</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670826826001</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +341,7 @@
     <MESSAGE value="Parse 1.3 better test" />
     <MESSAGE value="Some Calculator,Exceptions and PointManager" />
     <MESSAGE value="create ExpressionCalculator" />
-    <option name="LAST_COMMIT_MESSAGE" value="create ExpressionCalculator" />
+    <MESSAGE value="calculator" />
+    <option name="LAST_COMMIT_MESSAGE" value="calculator" />
   </component>
 </project>
