@@ -5,6 +5,8 @@ import parser.ParserMain;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import drawer.inter;
+
 public class Main {
     public void startMainController(String fileName){
         //生成parser
@@ -22,6 +24,7 @@ public class Main {
         System.out.println("Aim: "+args[0]);
         Main main=new Main();
         main.startMainController(args[0]);
+        inter test=new inter();
     }
 
 }

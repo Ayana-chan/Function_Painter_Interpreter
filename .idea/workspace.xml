@@ -3,9 +3,33 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Can show error position">
-      <change beforePath="$PROJECT_DIR$/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test2.txt" afterDir="false" />
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="gui 0.5">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/drawer/Draw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/MapGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drawer/MapGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/inter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drawer/inter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,35 +55,23 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\Maven\repository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../DeveloperTools/apache-maven-3.6.3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
         <option name="userSettingsFile" value="D:\DeveloperTools\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="2IjD17I0YVhxhV7I3YlQmrjjLpP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
-    "settings.editor.selected.configurable": "MavenSettings"
-  }
-}]]></component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="junit.framework.TestCase" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="parser" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ParseTest.testParse">
@@ -80,6 +92,17 @@
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Function_Painter_Interpreter" />
       <option name="PROGRAM_PARAMETERS" value="test1.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,16 +128,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.Lexer" />
       <item itemvalue="JUnit.LexTest.testLexerReading" />
       <item itemvalue="JUnit.ParseTest.testParse" />
+      <item itemvalue="应用程序.Unnamed" />
+      <item itemvalue="应用程序.Lexer" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ParseTest.testParse" />
         <item itemvalue="JUnit.LexTest.testLexerReading" />
-        <item itemvalue="Application.Lexer" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +155,7 @@
       <workItem from="1670768790246" duration="242000" />
       <workItem from="1670769814755" duration="238000" />
       <workItem from="1670770426738" duration="2005000" />
-      <workItem from="1670809873133" duration="23310000" />
+      <workItem from="1670809873133" duration="21269000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -303,21 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670828900571</updated>
     </task>
-    <task id="LOCAL-00025" summary="add point done. could choose whether print trees">
-      <created>1670832154326</created>
+    <task id="LOCAL-00025" summary="gui 0.5">
+      <created>1670844966886</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1670832154326</updated>
+      <updated>1670844966886</updated>
     </task>
-    <task id="LOCAL-00026" summary="Can show error position">
-      <created>1670835856050</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1670835856050</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +348,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
@@ -358,8 +374,17 @@
     <MESSAGE value="create ExpressionCalculator" />
     <MESSAGE value="calculator" />
     <MESSAGE value="could add pure point" />
-    <MESSAGE value="add point done. could choose whether print trees" />
-    <MESSAGE value="Can show error position" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can show error position" />
+    <MESSAGE value="gui 0.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui 0.5" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="583" y="257" key="Vcs.Push.Dialog.v2" timestamp="1670844789562">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="583" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1670844789562" />
+    <state x="804" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1670845012416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="804" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1670845012416" />
   </component>
 </project>
