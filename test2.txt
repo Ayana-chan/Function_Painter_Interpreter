@@ -1,1 +1,3 @@
-ROT IS 1*2+3*(4+5*cos(6.6+2**2)*7);
+//ROT IS 1*2+-3*(4+5*7);
+rot is 99-+-+-cos(1);
+for t From 3-2 to 10 step 3/(4-3) draw(T,-2*T);

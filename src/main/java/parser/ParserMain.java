@@ -57,6 +57,7 @@ public class ParserMain {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+//        System.out.println("fetch: "+currToken.type);
         if(currToken.type==TokenTypeEnum.ERRTOKEN){
             throw new LexicalErrorException(currToken);
         }
@@ -72,6 +73,9 @@ public class ParserMain {
         }
         fetchToken();
     }
+
+    //----------------------------------------------------
+    //parse functions
 
     private void parseProgram(){
         while(currToken.type!=TokenTypeEnum.NONTOKEN){
@@ -191,6 +195,7 @@ public class ParserMain {
     private ASTNode parseFactor(){
         ASTNode right;
         int negativeCnt=0;//记有几个负号
+        //"--"被记为注释，因此不会出现连续负号，测试时应当注意
         while(true){
             if(currToken.type==TokenTypeEnum.PLUS){
                 matchToken(currToken.type);
@@ -248,6 +253,7 @@ public class ParserMain {
         }
     }
 
+    //--------------------------------------------------------
     //辅助程序
     //打印语法树
     private void printTree(ASTNode root){
