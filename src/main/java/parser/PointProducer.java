@@ -2,11 +2,14 @@ package parser;
 
 import javafx.util.Pair;
 
-public class Calculator {
-//    int T;
+/**
+ * 计算点坐标并存储
+ */
+public class PointProducer {
     Pair<Double, Double> origin=new Pair<>(0.0,0.0);
     Pair<Double, Double> scale=new Pair<>(1.0,1.0);
     double rot=0.0;
+
 
 
     //set

@@ -7,8 +7,8 @@ import java.util.Set;
 
 public class PointManager {
     //设置画板的长宽
-    public static double maxX=100;
-    public static double maxY=100;
+    public static double maxX=1000;
+    public static double maxY=1000;
 
     //点坐标集合
     private Set<Pair<Double,Double>> points=new HashSet<>();
