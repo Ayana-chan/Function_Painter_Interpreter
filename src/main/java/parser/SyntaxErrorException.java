@@ -10,4 +10,9 @@ public class SyntaxErrorException extends RuntimeException{
                 "Error Token Type: "+token.type+"\n" +
                 "Supposed Token Type: "+aimTokenType);
     }
+    public SyntaxErrorException(Token token){
+        super("ERROR: Parse Failed.\n" +
+                "Error String: "+token.lexeme+"\n" +
+                "Error Token Type: "+token.type);
+    }
 }
