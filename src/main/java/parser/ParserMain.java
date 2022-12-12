@@ -4,9 +4,10 @@ import lexer.Lexer;
 import lexer.LexerFactory;
 import lexer.Token;
 import lexer.TokenTypeEnum;
+import parser.exceptions.analysis.LexicalErrorException;
+import parser.exceptions.analysis.SyntaxErrorException;
 import parser.treenodes.*;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -33,7 +34,7 @@ public class ParserMain {
 //        this.lexer=lexer;
 //    }
 
-    public void parse(String fileName) throws FileNotFoundException,LexicalErrorException,SyntaxErrorException{
+    public void parse(String fileName) throws FileNotFoundException, LexicalErrorException, SyntaxErrorException {
         //获取lexer
         lexer = LexerFactory.getLexer(fileName);
         if(lexer==null){

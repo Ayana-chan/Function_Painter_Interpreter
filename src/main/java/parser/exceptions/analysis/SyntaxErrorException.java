@@ -1,4 +1,4 @@
-package parser;
+package parser.exceptions.analysis;
 
 import lexer.Token;
 import lexer.TokenTypeEnum;
