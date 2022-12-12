@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Some Calculator,Exceptions and PointManager">
-      <change afterPath="$PROJECT_DIR$/src/main/java/parser/ExpressionCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parser/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/PointProducer.java" afterDir="false" />
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="create ExpressionCalculator">
+      <change afterPath="$PROJECT_DIR$/src/main/java/parser/exceptions/runtime/DivZeroException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parser/exceptions/runtime/FunctionArgumentOutOfBoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/parser/ExpressionCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/ExpressionCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ExpressionCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/PointProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/PointProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +22,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
@@ -44,14 +49,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JUnit.ParseTest.testParse">
     <configuration name="Lexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lexer.Lexer" />
@@ -123,7 +130,7 @@
       <workItem from="1670768790246" duration="242000" />
       <workItem from="1670769814755" duration="238000" />
       <workItem from="1670770426738" duration="2005000" />
-      <workItem from="1670809873133" duration="14009000" />
+      <workItem from="1670809873133" duration="16083000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -272,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670824259099</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="create ExpressionCalculator">
+      <created>1670824708192</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670824708192</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +324,7 @@
     <MESSAGE value="Parse 1.2 done! Better print" />
     <MESSAGE value="Parse 1.3 better test" />
     <MESSAGE value="Some Calculator,Exceptions and PointManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some Calculator,Exceptions and PointManager" />
+    <MESSAGE value="create ExpressionCalculator" />
+    <option name="LAST_COMMIT_MESSAGE" value="create ExpressionCalculator" />
   </component>
 </project>

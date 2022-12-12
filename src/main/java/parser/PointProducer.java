@@ -1,6 +1,7 @@
 package parser;
 
 import javafx.util.Pair;
+import parser.treenodes.ASTNode;
 
 /**
  * 计算点坐标并存储
@@ -10,7 +11,9 @@ public class PointProducer {
     Pair<Double, Double> scale=new Pair<>(1.0,1.0);
     double rot=0.0;
 
+    public void createPoint(double from, double to, double step, ASTNode expressionX,ASTNode expressionY){
 
+    }
 
     //set
 
