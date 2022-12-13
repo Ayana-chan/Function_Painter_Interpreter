@@ -12,7 +12,7 @@ public class LexTest {
     public void testLexerReading(){
         Lexer lexer=null;
         try {
-            lexer = LexerFactory.getLexer("test2.txt");
+            lexer = LexerFactory.getLexer("test1.txt");
         }catch (FileNotFoundException e){
             System.out.println("ERROR: File Not Found.");
             return;

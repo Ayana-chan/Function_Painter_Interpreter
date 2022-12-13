@@ -26,39 +26,21 @@ public class Lexer {
             txtReader.readChar();
         }
         //根据开头字符，分为三种情况进行拼接
-        //1.数字
+        //1.数字开头。必须是double。吃掉小数点、数字、字母，最后一定要符合double格式
         if(isDigit(txtReader.currChar)){
             StringBuilder s= new StringBuilder();
-            boolean isDotExisted=false;//是否读出小数点
-            while(isDigit(txtReader.currChar) || txtReader.currChar=='.'){
-                if(txtReader.currChar=='.'){
-                    //俩小数点，返回错误
-                    if(isDotExisted){
-                        //把连在一起的数字和字母吃掉
-                        while(isDigit(txtReader.currChar) || txtReader.currChar=='.' || isAlpha(txtReader.currChar)){
-                            s.append(txtReader.currChar);
-                            txtReader.readChar();
-                        }
-                        return new Token(TokenTypeEnum.ERRTOKEN,String.valueOf(s),0);
-                    }
-                    isDotExisted=true;
-                }
+            while(txtReader.currChar=='.' || isDigit(txtReader.currChar) || isAlpha(txtReader.currChar)){
                 s.append(txtReader.currChar);
                 txtReader.readChar();
             }
-            //如果数字后面紧接着字母，也是错误
-            if(isAlpha(txtReader.currChar)){
-                //把连在一起的数字和字母吃掉
-                while(isDigit(txtReader.currChar) || txtReader.currChar=='.' || isAlpha(txtReader.currChar)){
-                    s.append(txtReader.currChar);
-                    txtReader.readChar();
-                }
+            try{
+                double num=Double.parseDouble(String.valueOf(s));
+                return new Token(TokenTypeEnum.CONST_ID,String.valueOf(s),num);
+            }catch (NumberFormatException e){
                 return new Token(TokenTypeEnum.ERRTOKEN,String.valueOf(s),0);
             }
-            //建立Token时要计算其数值
-            return new Token(TokenTypeEnum.CONST_ID,String.valueOf(s),Double.parseDouble(String.valueOf(s)));
         }
-        //2.字母开头。目前只有纯字母才符合（保留字、函数名、参数、常数），但把数字也吃了可以方便报错
+        //2.字母开头。目前只有纯字母才符合（保留字、函数名、参数、常数）
         else if(isAlpha(txtReader.currChar)){
             StringBuilder s= new StringBuilder();
             while(isAlpha(txtReader.currChar) || isDigit(txtReader.currChar)){
@@ -113,3 +95,35 @@ public class Lexer {
         return txtReader;
     }
 }
+
+
+//废弃的识别数字
+//            StringBuilder s= new StringBuilder();
+//            boolean isDotExisted=false;//是否读出小数点
+//            while(isDigit(txtReader.currChar) || txtReader.currChar=='.'){
+//                if(txtReader.currChar=='.'){
+//                    //俩小数点，返回错误
+//                    if(isDotExisted){
+//                        //把连在一起的数字和字母吃掉
+//                        while(isDigit(txtReader.currChar) || txtReader.currChar=='.' || isAlpha(txtReader.currChar)){
+//                            s.append(txtReader.currChar);
+//                            txtReader.readChar();
+//                        }
+//                        return new Token(TokenTypeEnum.ERRTOKEN,String.valueOf(s),0);
+//                    }
+//                    isDotExisted=true;
+//                }
+//                s.append(txtReader.currChar);
+//                txtReader.readChar();
+//            }
+//            //如果数字后面紧接着字母，也是错误
+//            if(isAlpha(txtReader.currChar)){
+//                //把连在一起的数字和字母吃掉
+//                while(isDigit(txtReader.currChar) || txtReader.currChar=='.' || isAlpha(txtReader.currChar)){
+//                    s.append(txtReader.currChar);
+//                    txtReader.readChar();
+//                }
+//                return new Token(TokenTypeEnum.ERRTOKEN,String.valueOf(s),0);
+//            }
+//            //建立Token时要计算其数值
+//            return new Token(TokenTypeEnum.CONST_ID,String.valueOf(s),Double.parseDouble(String.valueOf(s)));
