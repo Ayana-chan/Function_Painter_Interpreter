@@ -33,6 +33,7 @@ public class Lexer {
                 s.append(txtReader.currChar);
                 txtReader.readChar();
             }
+            //通过string转double直接判断是否符合格式并赋值
             try{
                 double num=Double.parseDouble(String.valueOf(s));
                 return new Token(TokenTypeEnum.CONST_ID,String.valueOf(s),num);
@@ -40,7 +41,7 @@ public class Lexer {
                 return new Token(TokenTypeEnum.ERRTOKEN,String.valueOf(s),0);
             }
         }
-        //2.字母开头。目前只有纯字母才符合（保留字、函数名、参数、常数）
+        //2.字母开头。目前只有纯字母才符合（保留字、函数名、参数、常数）。吃掉字母、数字，最后去Map进行匹配
         else if(isAlpha(txtReader.currChar)){
             StringBuilder s= new StringBuilder();
             while(isAlpha(txtReader.currChar) || isDigit(txtReader.currChar)){
