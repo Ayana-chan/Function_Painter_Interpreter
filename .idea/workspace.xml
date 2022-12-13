@@ -22,11 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Move PointManager and Modify ParserMain">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Better Lexer for Numbers">
       <change beforePath="$PROJECT_DIR$/src/main/java/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lexer/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LexTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test1.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,7 @@
       <recent name="parser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParseTest.testParse">
+  <component name="RunManager" selected="JUnit.LexTest.testLexerReading">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -153,8 +150,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ParseTest.testParse" />
         <item itemvalue="JUnit.LexTest.testLexerReading" />
+        <item itemvalue="JUnit.ParseTest.testParse" />
         <item itemvalue="Application.inter" />
       </list>
     </recent_temporary>
@@ -177,7 +174,7 @@
       <workItem from="1670809873133" duration="21269000" />
       <workItem from="1670898041117" duration="602000" />
       <workItem from="1670924842818" duration="1442000" />
-      <workItem from="1670945583174" duration="579000" />
+      <workItem from="1670945583174" duration="1065000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -368,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670898635069</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Better Lexer for Numbers">
+      <created>1670946505840</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670946505840</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Token" />
     <MESSAGE value="LexerFactory &amp; Main" />
     <MESSAGE value="Better LexerFactory" />
     <MESSAGE value="Better LexerFactory(set EOF to '#') and test" />
@@ -411,6 +414,7 @@
     <MESSAGE value="Can show error position" />
     <MESSAGE value="Modify PointManager" />
     <MESSAGE value="Move PointManager and Modify ParserMain" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move PointManager and Modify ParserMain" />
+    <MESSAGE value="Better Lexer for Numbers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better Lexer for Numbers" />
   </component>
 </project>

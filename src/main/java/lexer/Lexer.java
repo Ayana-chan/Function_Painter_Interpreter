@@ -53,6 +53,7 @@ public class Lexer {
         else{
             Token token=TokenTypeEnum.stringTransToken(""+txtReader.currChar);
             txtReader.readChar();
+            //判断下一个符号
             //指数
             if(token.type==TokenTypeEnum.MUL && txtReader.currChar=='*'){
                 token=TokenTypeEnum.stringTransToken("**");
