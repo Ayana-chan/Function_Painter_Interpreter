@@ -12,7 +12,7 @@ public class ParseTest {
 //            parserMain.parse("funTest.txt");
 //            parserMain.parse("test1.txt");
             parserMain.parse("test2.txt");
-            for(Pair<Double,Double> p:parserMain.pointManager.getPoints()){
+            for(Pair<Double,Double> p:parserMain.getPointManager().getPoints()){
                 System.out.println("("+p.getKey()+","+p.getValue()+")");
             }
         }catch (FileNotFoundException e){

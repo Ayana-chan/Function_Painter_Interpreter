@@ -1,6 +1,5 @@
 package parser;
 
-import drawer.PointManager;
 import lexer.Lexer;
 import lexer.LexerFactory;
 import lexer.Token;
@@ -15,14 +14,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ParserMain {
-    public PointProducer pointProducer=new PointProducer();//点生产者，存储了各个参数值
-    public PointManager pointManager=new PointManager();//点管理库，用于前端显示
-
     public boolean isTreePrinterOn=true;//控制parser是否打印语法树
 
     private Token currToken;
 
     private Lexer lexer;
+
+    private PointProducer pointProducer=new PointProducer();//点生产者，存储了各个参数值
+    private PointManager pointManager=new PointManager();//点管理库，保存所有生成的点用于前端显示
 
     public void parse(String fileName) throws FileNotFoundException, LexicalErrorException, SyntaxErrorException {
         //获取lexer
@@ -283,5 +282,30 @@ public class ParserMain {
         }else{
             System.out.println("T");
         }
+    }
+
+
+    //get
+
+    public PointProducer getPointProducer() {
+        return pointProducer;
+    }
+
+    public PointManager getPointManager() {
+        return pointManager;
+    }
+
+    //set
+
+    public void setTreePrinterOn(boolean treePrinterOn) {
+        isTreePrinterOn = treePrinterOn;
+    }
+
+    public void setPointProducer(PointProducer pointProducer) {
+        this.pointProducer = pointProducer;
+    }
+
+    public void setPointManager(PointManager pointManager) {
+        this.pointManager = pointManager;
     }
 }

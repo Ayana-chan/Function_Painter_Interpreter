@@ -1,6 +1,5 @@
 package parser;
 
-import drawer.PointManager;
 import javafx.util.Pair;
 import parser.exceptions.runtime.FunctionArgumentOutOfBoundException;
 import parser.exceptions.runtime.MyRuntimeException;

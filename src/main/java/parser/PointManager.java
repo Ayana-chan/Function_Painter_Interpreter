@@ -1,4 +1,4 @@
-package drawer;
+package parser;
 
 import javafx.util.Pair;
 

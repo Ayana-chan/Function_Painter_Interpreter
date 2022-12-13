@@ -22,14 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="gui 0.5">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/drawer/Draw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Modify PointManager">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/MapGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drawer/MapGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/inter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drawer/inter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/PointManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/PointManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/ParserMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ParserMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/PointProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/PointProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,20 +58,27 @@
     </option>
   </component>
   <component name="ProjectId" id="2IjD17I0YVhxhV7I3YlQmrjjLpP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="parser" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="parser" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.inter">
+  <component name="RunManager" selected="JUnit.ParseTest.testParse">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -91,7 +95,7 @@
       <module name="Function_Painter_Interpreter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lexer.*" />
+          <option name="PATTERN" value="parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,7 +116,7 @@
       <module name="Function_Painter_Interpreter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="drawer.*" />
+          <option name="PATTERN" value="parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,8 +153,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.inter" />
         <item itemvalue="JUnit.ParseTest.testParse" />
+        <item itemvalue="Application.inter" />
         <item itemvalue="JUnit.LexTest.testLexerReading" />
       </list>
     </recent_temporary>
@@ -171,6 +175,7 @@
       <workItem from="1670769814755" duration="238000" />
       <workItem from="1670770426738" duration="2005000" />
       <workItem from="1670809873133" duration="21269000" />
+      <workItem from="1670898041117" duration="532000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -347,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670844966886</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Modify PointManager">
+      <created>1670857149691</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670857149691</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,10 +375,8 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First Commit" />
     <MESSAGE value="TokenType" />
     <MESSAGE value="Token" />
     <MESSAGE value="LexerFactory &amp; Main" />
@@ -390,16 +400,8 @@
     <MESSAGE value="calculator" />
     <MESSAGE value="could add pure point" />
     <MESSAGE value="gui 0.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui 0.5" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="583" y="257" key="Vcs.Push.Dialog.v2" timestamp="1670844789562">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="583" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1670844789562" />
-    <state x="804" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1670845012416">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="804" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1670845012416" />
+    <MESSAGE value="Can show error position" />
+    <MESSAGE value="Modify PointManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify PointManager" />
   </component>
 </project>
