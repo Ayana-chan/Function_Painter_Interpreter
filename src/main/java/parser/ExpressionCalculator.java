@@ -55,11 +55,11 @@ public class ExpressionCalculator {
         double ans;
         switch (funName){
             case "SIN":
-                return Math.sin(argument*Math.PI/180);
+                return Math.sin(argument);
             case "COS":
-                return Math.cos(argument*Math.PI/180);
+                return Math.cos(argument);
             case "TAN":
-                ans=Math.tan(argument*Math.PI/180);
+                ans=Math.tan(argument);
                 if(Double.isNaN(ans) || ans>tooBigBound){
                     throw new FunctionArgumentOutOfBoundException(funName,argument);
                 }

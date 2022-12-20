@@ -1,18 +1,25 @@
-import lexer.Lexer;
-import lexer.LexerFactory;
+import drawer.Drawer;
+import javafx.util.Pair;
 import parser.ParserMain;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import legacy.inter;
 
-import drawer.inter;
+import java.io.FileNotFoundException;
 
 public class Main {
     public void startMainController(String fileName){
         //生成parser
         ParserMain parserMain=new ParserMain();
+        //parse
+        try {
+            parserMain.parse(fileName);
+        }catch (FileNotFoundException e){
+            System.err.println(e.getMessage());
+        }
 
-
+        //画图
+        Drawer drawer=new Drawer();
+        drawer.draw(parserMain.getPointManager());
     }
 
     public static void main(String[] args) {

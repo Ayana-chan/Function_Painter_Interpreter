@@ -23,7 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Better Lexer for Numbers">
-      <change beforePath="$PROJECT_DIR$/src/main/java/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lexer/Lexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/drawer/Drawer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/drawer/GUIPainter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/legacy/MapGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/drawer/GUIPainterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/funTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/Draw.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/MapGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/inter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/legacy/inter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/ExpressionCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ExpressionCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit3 Test Class" />
         <option value="Class" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
@@ -62,20 +74,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+      <recent name="drawer" />
       <recent name="parser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LexTest.testLexerReading">
+  <component name="RunManager" selected="JUnit.MainTest.testStartMainController">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -83,19 +99,6 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Lexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lexer.Lexer" />
-      <module name="Function_Painter_Interpreter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="parser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,7 +112,7 @@
       </method>
     </configuration>
     <configuration name="inter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="drawer.inter" />
+      <option name="MAIN_CLASS_NAME" value="legacy.inter" />
       <module name="Function_Painter_Interpreter" />
       <extension name="coverage">
         <pattern>
@@ -121,11 +124,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GUIPainterTest.testPaintGUI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Function_Painter_Interpreter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="legacy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="drawer" />
+      <option name="MAIN_CLASS_NAME" value="drawer.GUIPainterTest" />
+      <option name="METHOD_NAME" value="testPaintGUI" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LexTest.testLexerReading" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Function_Painter_Interpreter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LexTest" />
       <option name="METHOD_NAME" value="testLexerReading" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testStartMainController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Function_Painter_Interpreter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="testStartMainController" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,15 +172,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.Lexer" />
       <item itemvalue="Application.inter" />
+      <item itemvalue="JUnit.GUIPainterTest.testPaintGUI" />
+      <item itemvalue="JUnit.MainTest.testStartMainController" />
       <item itemvalue="JUnit.LexTest.testLexerReading" />
       <item itemvalue="JUnit.ParseTest.testParse" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LexTest.testLexerReading" />
+        <item itemvalue="JUnit.MainTest.testStartMainController" />
+        <item itemvalue="JUnit.GUIPainterTest.testPaintGUI" />
         <item itemvalue="JUnit.ParseTest.testParse" />
+        <item itemvalue="JUnit.LexTest.testLexerReading" />
         <item itemvalue="Application.inter" />
       </list>
     </recent_temporary>
@@ -174,7 +206,8 @@
       <workItem from="1670809873133" duration="21269000" />
       <workItem from="1670898041117" duration="602000" />
       <workItem from="1670924842818" duration="1442000" />
-      <workItem from="1670945583174" duration="1065000" />
+      <workItem from="1670945583174" duration="1470000" />
+      <workItem from="1671537517101" duration="6587000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -372,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670946505840</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Better Lexer for Numbers">
+      <created>1670946749943</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1670946749943</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Better Lexer for Numbers">
+      <created>1670946915936</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1670946915936</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -16,8 +16,7 @@ public class ParseTest {
                 System.out.println("("+p.getKey()+","+p.getValue()+")");
             }
         }catch (FileNotFoundException e){
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
-
     }
 }
