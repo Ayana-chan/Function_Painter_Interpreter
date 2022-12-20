@@ -22,20 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Better Lexer for Numbers">
-      <change afterPath="$PROJECT_DIR$/src/main/java/drawer/Drawer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/drawer/GUIPainter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/legacy/MapGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/drawer/GUIPainterTest.java" afterDir="false" />
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Draw done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/funTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/Draw.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/MapGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drawer/inter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/legacy/inter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parser/ExpressionCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ExpressionCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +49,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\Maven\repository" />
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../DeveloperTools/apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\DeveloperTools\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -78,7 +66,8 @@
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase"
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -91,7 +80,7 @@
       <recent name="parser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.testStartMainController">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -103,10 +92,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Function_Painter_Interpreter" />
-      <option name="PROGRAM_PARAMETERS" value="test1.txt" />
+      <option name="PROGRAM_PARAMETERS" value="funTest.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,7 +160,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.inter" />
       <item itemvalue="JUnit.GUIPainterTest.testPaintGUI" />
       <item itemvalue="JUnit.MainTest.testStartMainController" />
@@ -207,7 +196,7 @@
       <workItem from="1670898041117" duration="602000" />
       <workItem from="1670924842818" duration="1442000" />
       <workItem from="1670945583174" duration="1470000" />
-      <workItem from="1671537517101" duration="6587000" />
+      <workItem from="1671537517101" duration="6985000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -419,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670946915936</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Draw done">
+      <created>1671549601852</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1671549601852</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +433,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LexerFactory &amp; Main" />
     <MESSAGE value="Better LexerFactory" />
     <MESSAGE value="Better LexerFactory(set EOF to '#') and test" />
     <MESSAGE value="fetchToken can get token depend on space. Modefying" />
@@ -462,6 +457,7 @@
     <MESSAGE value="Modify PointManager" />
     <MESSAGE value="Move PointManager and Modify ParserMain" />
     <MESSAGE value="Better Lexer for Numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Better Lexer for Numbers" />
+    <MESSAGE value="Draw done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Draw done" />
   </component>
 </project>

@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 import java.util.HashSet;
 import java.util.Set;
 
-public class GUIPainterTest extends TestCase {
+public class GUIPainterTest{
 
     public void testPaintGUI() {
         Set<Pair<Integer,Integer>> points = new HashSet<>();
