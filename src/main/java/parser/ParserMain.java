@@ -36,11 +36,11 @@ public class ParserMain {
         }catch (MyAnalysisException e){
             System.err.println("*** Analysis Exception ***");
             System.err.println(e.getMessage());
-            System.err.println("Error Position: line:"+lexer.getTxtReader().getLine()+" ,col:"+lexer.getTxtReader().getCol());
+            System.err.println("Error Position: line:"+lexer.getTxtReader().getLine()+" ,col:"+(lexer.getTxtReader().getCol()-1));
         }catch (MyRuntimeException e){
             System.err.println("*** Runtime Exception ***");
             System.err.println(e.getMessage());
-            System.err.println("Error Position: line:"+lexer.getTxtReader().getLine()+" ,col:"+lexer.getTxtReader().getCol());
+            System.err.println("Error Position: line:"+lexer.getTxtReader().getLine()+" ,col:"+(lexer.getTxtReader().getCol()-1));
         }
     }
 

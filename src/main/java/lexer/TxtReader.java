@@ -16,9 +16,9 @@ public class TxtReader {
      */
     public char currChar;
 
-    //记录当前字符所在行列
+    //记录当前字符（currChar）所在行列
     private int line=1;
-    private int col=0;
+    private int col=1;
 
     private InputStreamReader inputStreamReader;
 
@@ -31,7 +31,7 @@ public class TxtReader {
         //行列变化
         if(currChar=='\n'){ //注：/n总是在/r后，且不会在这种换行符处报错
             line++;
-            col=0;
+            col=1;
         }else{
             col++;
         }

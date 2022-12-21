@@ -22,19 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Modify Test">
+    <list default="true" id="1ddbde50-ccfb-4707-9179-f18b9cd592ff" name="Changes" comment="Better log &amp; test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/funTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parseTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/parseTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lexer/TxtReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lexer/TxtReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parser/ParserMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/ParserMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parser/PointProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/PointProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LexTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/drawer/GUIPainterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/drawer/GUIPainterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lexTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/parseTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +83,7 @@
       <recent name="parser" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ParseTest.testParse">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -208,7 +200,7 @@
       <workItem from="1670924842818" duration="1442000" />
       <workItem from="1670945583174" duration="1470000" />
       <workItem from="1671537517101" duration="7823000" />
-      <workItem from="1671587356549" duration="2694000" />
+      <workItem from="1671587356549" duration="3385000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1670685959646</created>
@@ -434,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671549877252</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Better log &amp; test">
+      <created>1671590177646</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1671590177646</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Better LexerFactory(set EOF to '#') and test" />
     <MESSAGE value="fetchToken can get token depend on space. Modefying" />
     <MESSAGE value="fetchToken done" />
     <MESSAGE value="Better Multi Dot Error" />
@@ -477,6 +475,7 @@
     <MESSAGE value="Better Lexer for Numbers" />
     <MESSAGE value="Draw done" />
     <MESSAGE value="Modify Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify Test" />
+    <MESSAGE value="Better log &amp; test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better log &amp; test" />
   </component>
 </project>
