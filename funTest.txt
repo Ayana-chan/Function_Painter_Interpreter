@@ -6,7 +6,7 @@
 //for t from sqrt(2) to 999 step 1 draw(t,t);
 
 origin is (100,100);
-//rot is 45;
+rot is 45;
 scale is (0.5,1.2);
 
 for t from 1 to 500 step 1 draw(t,10*sqrt(t));

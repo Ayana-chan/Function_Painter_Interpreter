@@ -56,8 +56,8 @@ public class PointProducer {
                 //坐标变换
                 x*=scale.getKey();
                 y*=scale.getValue();
-                tempX=x*Math.cos(rot)-y*Math.sin(rot);
-                tempY=x*Math.sin(rot)+y*Math.cos(rot);
+                tempX=x*Math.cos(rot)+y*Math.sin(rot);
+                tempY=-x*Math.sin(rot)+y*Math.cos(rot);
                 x=tempX+ origin.getKey();
                 y=tempY+ origin.getValue();
                 //添加
