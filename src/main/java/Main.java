@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 
 public class Main {
     public void startMainController(String fileName){
+        System.out.println("\n Prepare To Run...\n");
         //生成parser
         ParserMain parserMain=new ParserMain();
         //parse
@@ -16,8 +17,10 @@ public class Main {
         }catch (FileNotFoundException e){
             System.err.println(e.getMessage());
         }
+        System.out.println("\nAnalysis Succeed!\n");
 
         //画图
+        System.out.println("\n Drawing...\n");
         Drawer drawer=new Drawer();
         drawer.draw(parserMain.getPointManager());
     }

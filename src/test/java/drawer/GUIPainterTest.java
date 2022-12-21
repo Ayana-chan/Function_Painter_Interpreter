@@ -7,8 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class GUIPainterTest{
-
-    public void testPaintGUI() {
+    public static void main(String[] args) {
         Set<Pair<Integer,Integer>> points = new HashSet<>();
         points.add(new Pair<>(100,100));
         points.add(new Pair<>(200,400));

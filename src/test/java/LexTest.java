@@ -12,13 +12,13 @@ public class LexTest {
     public void testLexerReading(){
         Lexer lexer=null;
         try {
-            lexer = LexerFactory.getLexer("test1.txt");
+            lexer = LexerFactory.getLexer("lexTest.txt");
         }catch (FileNotFoundException e){
-            System.out.println("ERROR: File Not Found.");
+            System.err.println("ERROR: File Not Found.");
             return;
         }
         if(lexer==null){
-            System.out.println("ERROR: Lexer Production Error.");
+            System.err.println("ERROR: Lexer Production Error.");
             return;
         }
         Token token;

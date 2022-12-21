@@ -10,8 +10,8 @@ public class ParseTest {
         ParserMain parserMain=new ParserMain();
         try {
 //            parserMain.parse("funTest.txt");
-//            parserMain.parse("test1.txt");
-            parserMain.parse("test2.txt");
+//            parserMain.parse("lexTest.txt");
+            parserMain.parse("parseTest.txt");
             for(Pair<Double,Double> p:parserMain.getPointManager().getPoints()){
                 System.out.println("("+p.getKey()+","+p.getValue()+")");
             }

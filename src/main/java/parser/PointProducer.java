@@ -41,7 +41,7 @@ public class PointProducer {
             return;
         }
         //遍历计算各点坐标并添加到pointManager
-        System.out.println("\nGoing To Print Point...\n" +
+        System.out.println("\nAdding Point...\n" +
                 "Current Arguments:\n" +
                 "\tSCALE: ("+scale.getKey()+","+scale.getValue()+")\n" +
                 "\tROT: "+rot*180/Math.PI+"\n"+ //弧度转角度

@@ -33,7 +33,12 @@ public class ParserMain {
             fetchToken();//读入第一个token
             //以Program为入口开始语法分析
             parseProgram();
-        }catch (MyAnalysisException | MyRuntimeException e){
+        }catch (MyAnalysisException e){
+            System.err.println("*** Analysis Exception ***");
+            System.err.println(e.getMessage());
+            System.err.println("Error Position: line:"+lexer.getTxtReader().getLine()+" ,col:"+lexer.getTxtReader().getCol());
+        }catch (MyRuntimeException e){
+            System.err.println("*** Runtime Exception ***");
             System.err.println(e.getMessage());
             System.err.println("Error Position: line:"+lexer.getTxtReader().getLine()+" ,col:"+lexer.getTxtReader().getCol());
         }

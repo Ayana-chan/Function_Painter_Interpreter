@@ -17,27 +17,26 @@ public class TxtReader {
     public char currChar;
 
     //记录当前字符所在行列
-    private int line;
-    private int col;
+    private int line=1;
+    private int col=0;
 
     private InputStreamReader inputStreamReader;
 
     public TxtReader(InputStreamReader inputStreamReader) throws IOException {
         this.inputStreamReader=inputStreamReader;
-        line=1;
-        col=0;
         readChar();//生成对象时就读取第一个字符
     }
 
     public void readChar() throws IOException {
-        int in=inputStreamReader.read();
         //行列变化
-        if(currChar=='\n'){
+        if(currChar=='\n'){ //注：/n总是在/r后，且不会在这种换行符处报错
             line++;
-            col=1;
+            col=0;
         }else{
             col++;
         }
+        //读取
+        int in=inputStreamReader.read();
         //转化为char
         currChar = Character.toUpperCase((char) in);
     }
