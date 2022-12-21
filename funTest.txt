@@ -22,4 +22,4 @@ origin is (100,300);
 rot is 0;
 scale is (50,50);
 
-for t from -5 to 10 step 0.07 draw(t+3,(t-1)**2-2);
+for t from -5 to 10 step 0.07 draw(t+3,(t-1.5)**2-2.3);
