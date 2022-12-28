@@ -50,7 +50,7 @@ public class Lexer {
             }
             return TokenTypeEnum.stringTransToken(String.valueOf(s));
         }
-        //3.运算符、分隔符。除乘法以外都是单字符成Token
+        //3.运算符、分隔符。只有单符号和双符号
         else{
             Token token=TokenTypeEnum.stringTransToken(""+txtReader.currChar);
             txtReader.readChar();
